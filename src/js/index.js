@@ -25,6 +25,49 @@ var ingredientNutrition = {
             ['Ash', 25],
             ['Other', 10]
         ]
+    },
+    'Soy Meal': {
+        columns: [
+            ['Protein', 12],
+            ['NFE (Carbs)', 67],
+            ['Fat', 77],
+            ['Ash', 25],
+            ['Other', 10]
+        ]
+    },
+    'Cyclops': {
+        columns: [
+            ['Protein', 10],
+            ['NFE (Carbs)', 67],
+            ['Ash', 25],
+            ['Other', 10]
+        ]
+    },
+    'Daphnia': {
+        columns: [
+            ['Protein', 12],
+            ['NFE (Carbs)', 67],
+            ['Ash', 25],
+            ['Other', 10]
+        ]
+    },
+    'Salmon Pellets': {
+        columns: [
+            ['Protein', 12],
+            ['NFE (Carbs)', 47],
+            ['Fat', 33],
+            ['Ash', 18],
+            ['Other', 4]
+        ]
+    },
+    'Carp Pellets': {
+        columns: [
+            ['Protein', 12],
+            ['NFE (Carbs)', 67],
+            ['Fat', 77],
+            ['Ash', 25],
+            ['Other', 10]
+        ]
     }
 }
 
@@ -59,12 +102,14 @@ var chart2 = c3.generate({
             ['Carp Pellets', 120]
         ],
         type : 'donut',
-        onclick: function (d, i) { 
-            console.log("onclick", d, i); 
+        onclick: function (d, i) {             
+        },
+        onmouseover: function (d, i) { 
             chart1.load(ingredientNutrition[d.id]);
         },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        onmouseout: function (d, i) { 
+            chart1.load(ingredientNutrition.Overall);
+        }
     },
     donut: {
         title: ""
