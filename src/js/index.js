@@ -121,17 +121,19 @@ var ingredients = c3.generate({
 var costs = c3.generate({
     bindto: '#price-yield',
     data: {
+        x:'x',
         columns: [
-            ['data1', 5, 10, 50, 80, 90, 95],
+            ['x', '400', '600', '800', '1000', '1200', '1400', '1600'],
+            ['price vs yield', 200, 400, 900, 1300, 1500, 1550, 1575]
         ],
         type: 'spline'
     },
     axis: {
         x: {
-            label: 'Yield'
+            label: 'Cost per ton'
         },
         y: {
-            label: 'Cost'
+            label: 'Yield in net kg'
         }
     }
 });
