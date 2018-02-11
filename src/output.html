@@ -42,55 +42,144 @@
       </div>
   </nav>
 
-
+  <br/>
+  <div class="container" style="width:50%">
+    <div class="row">
+      <div class="col-sm-2 text-right">
+        Fish Type: 
+      </div>
+      <div class="col-sm-2 text-left">
+        <select class="form-control">
+          <option value="one">Tilapias</option>
+          <option value="two">Carp</option>
+          <option value="three">Mollusks</option>
+          <option value="four">Shrimps</option>
+          <option value="five">Catfish</option>
+          <option value="five">Salmon</option>
+        </select>
+      </div>
+      <div class="col-sm-2 text-right">
+        Fish Age:
+      </div>
+      <div class="col-sm-2 text-left">
+        <select class="form-control">
+          <option value="one">0-2 weeks</option>
+          <option value="two" selected="selected">2-6 weeks</option>
+          <option value="three">6-26 weeks</option>
+          <option value="four">26-52 weeks</option>
+        </select>
+      </div>
+      <div class="col-sm-2 text-right">
+        Location:
+      </div>
+      <div class="col-sm-2 text-left">
+        <select class="form-control">
+          <option value="one">Canada</option>
+          <option value="three">Ecuador</option>
+          <option value="four">Taiwan</option>
+          <option value="five">Thailand</option>
+          <option value="two">United States</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <br/>
   <div class="container">
     <br/>
-    <div class="card-deck mb-2 text-center">
+    <div class="card-deck mb-2 text-left">
+      <div class="col-sm-6 text-left">
+        <h4>Fish Foods</h4>
+        <table class="table table-bordered small small">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Soy</th>
+                <th>Fish</th>
+                <th>Protien</th>
+                <th>Fiber</th>
+                <th>Ash</th>
+                <th>Lipids</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Voda Feeds: Carb Feed</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>32%</td>
+                <td>13.5%</td>
+                <td>7.2%</td>
+                <td>7%</td>
+                <td>$10/kg</td>
+            </tr>
+            <tr>
+                <td>Trout Feed</td>
+                <td>?%</td>
+                <td>?%</td>
+                <td>45%-47%</td>
+                <td>9%</td>
+                <td>7.4%</td>
+                <td>12.5%</td>
+                <td>$10/kg</td>
+            </tr>
+            <tr>
+                <td>Soy Meal</td>
+                <td>0%</td>
+                <td>100%</td>
+                <td>56%</td>
+                <td>13.5%</td>
+                <td>12.2%</td>
+                <td>7%</td>
+                <td>$10/kg</td>
+            </tr>
+            <tr>
+                <td>Fish Meal</td>
+                <td>100%</td>
+                <td>0%</td>
+                <td>75%</td>
+                <td>3.5%</td>
+                <td>7.2%</td>
+                <td>4%</td>
+                <td>$10/kg</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Ingredients</h4>
+      <div class="col-sm-6">
+        <h4>Diet Report</h4>
+        <div class="card-deck mb-2">
+          <div class="card box-shadow" style="border: 0px;">
+            <div class="card-body">
+              <div id="ingredients"></div>
+            </div>
           </div>
-          <div class="card-body">
-            <div id="ingredients"></div>
+
+          <div class="card box-shadow" style="border: 0px;">
+            <div class="card-body">
+              <div id="composition"></div>
+            </div>
           </div>
         </div>
 
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 id="composition-header" class="my-0 font-weight-normal">Nutrutional Composition: Overall</h4>
+        <div class="card-deck mb-2">
+          <div class="card mb-2 box-shadow" style="border: 0px;">
+            <div class="card-body">
+              <div id="price-yield"></div>
+            </div>
           </div>
-          <div class="card-body">
-            <div id="composition"></div>
+          <div class="card mb-2 box-shadow" style="border: 0px;">
+            <div class="card-body">
+              <div id="price-composition"></div>
+            </div>
           </div>
         </div>
-
+      </div>
     </div>
-
-    <div class="card-deck mb-2 text-center">
-
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Price vs Yield</h4>
-          </div>
-          <div class="card-body">
-            <div id="price-yield"></div>
-          </div>
-        </div>
-
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Price vs fishmeal/plantmeal composition</h4>
-          </div>
-          <div class="card-body">
-            <div id="price-composition"></div>
-          </div>
-        </div>
-
-    </div>
-
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

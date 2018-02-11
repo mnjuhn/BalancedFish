@@ -85,7 +85,7 @@ var composition = c3.generate({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     donut: {
-        title: ""
+        title: "Nutrutional Composition: Total"
     }
 });
 
@@ -106,15 +106,15 @@ var ingredients = c3.generate({
         },
         onmouseover: function (d, i) { 
             chart1.load(ingredientNutrition[d.id]);
-            $('#composition-header').text("Nutrutional Composition: " + d.id);
+            d3.select('#composition-header .c3-chart-arcs-title').node().innerHTML = "Nutrutional Composition: " + d.id;
         },
         onmouseout: function (d, i) { 
             chart1.load(ingredientNutrition.Overall);
-            $('#composition-header').text("Nutrutional Composition: Overall");
+            d3.select('#composition-header .c3-chart-arcs-title').node().innerHTML = "Nutrutional Composition: Overall";
         }
     },
     donut: {
-        title: ""
+        title: "Ingredients"
     }
 });
 
