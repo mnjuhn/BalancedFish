@@ -18,7 +18,7 @@
     <script scr="js/w3.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: none;">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,10 +35,6 @@
                   <a class="nav-link" href="output.html">Output</a>
               </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
       </div>
   </nav>
 
@@ -78,7 +74,7 @@
           <option value="three">Ecuador</option>
           <option value="four">Taiwan</option>
           <option value="five">Thailand</option>
-          <option value="two">United States</option>
+          <option value="two">United States </option>
         </select>
       </div>
     </div>
@@ -90,7 +86,7 @@
     <div class="card-deck mb-2 text-left">
       <div class="col-sm-6 text-left">
         <h4>Fish Foods</h4>
-        <table class="table table-bordered small small">
+        <table id="feed" class="table table-striped table-bordered small small" cellspacing="0" width="100%">
             <thead>
             <tr>
                 <th>Name</th>
@@ -151,9 +147,10 @@
       <div class="col-sm-6">
         <h4>Diet Report</h4>
         <div class="card-deck mb-2">
-          <div class="card box-shadow" style="border: 0px;">
-            <div class="card-body">
-              <div id="ingredients"></div>
+
+          <div class="card box-shadow" style="border: 0px; background-color: none;">
+            <div class="card-body" style="border: 0px;background-color: none;">
+              <div id="ingredients" style="border: 0px;background-color: none;"></div>
             </div>
           </div>
 
@@ -179,7 +176,15 @@
       </div>
     </div>
   </div>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+
+
   <script src="js/index.js"></script>
 </body>
 </html>

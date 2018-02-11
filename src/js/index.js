@@ -85,7 +85,7 @@ var composition = c3.generate({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     donut: {
-        title: "Nutrutional Composition: Total"
+        title: "Nutrition: Overall"
     }
 });
 
@@ -105,12 +105,12 @@ var ingredients = c3.generate({
         onclick: function (d, i) {             
         },
         onmouseover: function (d, i) { 
-            chart1.load(ingredientNutrition[d.id]);
-            d3.select('#composition-header .c3-chart-arcs-title').node().innerHTML = "Nutrutional Composition: " + d.id;
+            composition.load(ingredientNutrition[d.id]);
+            d3.select('#composition .c3-chart-arcs-title').node().innerHTML = "Nutrition: " + d.id;
         },
         onmouseout: function (d, i) { 
-            chart1.load(ingredientNutrition.Overall);
-            d3.select('#composition-header .c3-chart-arcs-title').node().innerHTML = "Nutrutional Composition: Overall";
+            composition.load(ingredientNutrition.Overall);
+            d3.select('#composition .c3-chart-arcs-title').node().innerHTML = "Nutrition: Overall";
         }
     },
     donut: {
@@ -137,3 +137,10 @@ var costs = c3.generate({
         }
     }
 });
+
+
+$(document).ready(function() {
+    $('#feed').DataTable( {
+        select: true
+    } );
+} );
