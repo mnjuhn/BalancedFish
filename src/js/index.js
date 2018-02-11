@@ -125,7 +125,8 @@ var costs = c3.generate({
         x:'x',
         columns: [
             ['x', '400', '600', '800', '1000', '1200', '1400', '1600'],
-            ['price vs yield', 400, 800, 1300, 1600, 1750, 1820, 1850]
+            ['price vs yield', 400, 800, 1300, 1600, 1750, 1820, 1850],
+            ['expected yield for given price', null, null, 1500]
         ],
         type: 'spline'
     },
@@ -188,7 +189,8 @@ var fishAndSoyMeal = c3.generate({
         x:'x',
         columns: [
             ['x', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-            ['price vs % of fish meal', 499, 618, 737, 856, 975, 1094, 1213, 1332, 1451, 1570]
+            ['price vs % of fish meal', 499, 618, 737, 856, 975, 1094, 1213, 1332, 1451, 1570],
+            ['expected price for given fish meal %', null, null, 737]
         ],
         type: 'spline'
     },
