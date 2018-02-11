@@ -119,12 +119,19 @@ var ingredients = c3.generate({
 });
 
 var costs = c3.generate({
-    bindto: '#chart2',
+    bindto: '#price-yield',
     data: {
         columns: [
-            ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 130, 100, 140, 200, 150, 50]
+            ['data1', 5, 10, 50, 80, 90, 95],
         ],
         type: 'spline'
+    },
+    axis: {
+        x: {
+            label: 'Yield'
+        },
+        y: {
+            label: 'Cost'
+        }
     }
 });
