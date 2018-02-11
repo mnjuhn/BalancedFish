@@ -72,8 +72,8 @@ var ingredientNutrition = {
 }
 
 
-var chart1 = c3.generate({
-    bindto: '#chart1',   
+var composition = c3.generate({
+    bindto: '#composition',   
     data: {
         columns: ingredientNutrition.Overall.columns,
         type : 'donut',
@@ -89,8 +89,8 @@ var chart1 = c3.generate({
     }
 });
 
-var chart2 = c3.generate({
-    bindto: '#chart2',   
+var ingredients = c3.generate({
+    bindto: '#ingredients',   
     data: {
         columns: [
             ['Insects', 30],
@@ -106,9 +106,11 @@ var chart2 = c3.generate({
         },
         onmouseover: function (d, i) { 
             chart1.load(ingredientNutrition[d.id]);
+            $('#composition-header').text("Nutrutional Composition: " + d.id);
         },
         onmouseout: function (d, i) { 
             chart1.load(ingredientNutrition.Overall);
+            $('#composition-header').text("Nutrutional Composition: Overall");
         }
     },
     donut: {
@@ -116,20 +118,13 @@ var chart2 = c3.generate({
     }
 });
 
-var chart = c3.generate({
-    bindto: '#chart3',   
+var costs = c3.generate({
+    bindto: '#chart2',
     data: {
         columns: [
-            ['Soy Meal X', 30],
-            ['Fish Meal Y', 120],
-            ['Amino Acid Mix A', 120]
+            ['data1', 30, 200, 100, 400, 150, 250],
+            ['data2', 130, 100, 140, 200, 150, 50]
         ],
-        type : 'donut',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-    },
-    donut: {
-        title: "Iris Petal Width"
+        type: 'spline'
     }
 });

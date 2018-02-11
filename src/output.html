@@ -16,56 +16,79 @@
     <script scr="js/w3.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="index.html"><img src="img/whole_fish_market.png" height="100"/></a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="FishTypes.html">Fish Types <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="diet.html">Diet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="output.html">Output</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/whole_fish_market.png" height="100"/></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="FishTypes.html">Fish Types <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="diet.html">Diet</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="output.html">Output</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
 
-</nav>
 
-
-    <div class="container">
-        <br/>
-    <div class="card-deck mb-3 text-center">
-
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Nutrutional Composition</h4>
-          </div>
-          <div class="card-body">
-            <div id="chart1"></div>
-          </div>
-        </div>
+  <div class="container">
+    <br/>
+    <div class="card-deck mb-2 text-center">
 
         <div class="card mb-4 box-shadow">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Ingredients</h4>
           </div>
           <div class="card-body">
-            <div id="chart2"></div>
+            <div id="ingredients"></div>
+          </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 id="composition-header" class="my-0 font-weight-normal">Nutrutional Composition: Overall</h4>
+          </div>
+          <div class="card-body">
+            <div id="composition"></div>
           </div>
         </div>
 
     </div>
-</div>
+
+    <div class="card-deck mb-2 text-center">
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Price vs Yield</h4>
+          </div>
+          <div class="card-body">
+            <div id="price-yield"></div>
+          </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Price vs fishmeal/plantmeal composition</h4>
+          </div>
+          <div class="card-body">
+            <div id="price-composition"></div>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
