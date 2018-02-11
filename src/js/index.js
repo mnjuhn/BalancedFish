@@ -1,4 +1,4 @@
-var ingredientNutrition = { 
+	var ingredientNutrition = { 
     Overall: {
         columns: [
             ['Protein', 30],
@@ -140,9 +140,27 @@ var costs = c3.generate({
 
 
 
+// $(document).ready(function() {
+//     $('#feed').DataTable( {
+//         select: true
+//     } );
+// } );
+
 $(document).ready(function() {
-    $('#feed').DataTable( {
-        select: true
+    var table = $('#feed').DataTable();
+ 
+    $('#feed tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
     } );
 } );
 
