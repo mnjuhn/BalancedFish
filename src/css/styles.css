@@ -6,6 +6,11 @@
     font-size: 10px;
 
 }
+
+.fullscreen {
+    min-height: 100%;
+}
+
 .navbar {
 	background-color: transparent;
 }
@@ -22,6 +27,10 @@
 
 .dataTables_filter {
 	display: none;
+}
+
+html {
+    height: 100%;
 }
 
 body {
