@@ -160,6 +160,7 @@ $(document).ready(function() {
             table.$('tr.selected').removeClass('selected');
             $(this).addClass('selected');
 
+            $('#report_title').html("Diet Report: " + $('td:eq(0)', this).html());
             var protein = parseFloat($('td:eq(3)', this).html());
             var ash = parseFloat($('td:eq(4)', this).html());
             var lipids = parseFloat($('td:eq(5)', this).html());
