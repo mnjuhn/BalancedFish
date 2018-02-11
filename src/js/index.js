@@ -139,8 +139,30 @@ var costs = c3.generate({
 });
 
 
+
 $(document).ready(function() {
     $('#feed').DataTable( {
         select: true
     } );
 } );
+
+var fishAndSoyMeal = c3.generate({
+    bindto: '#price-meal',
+    data: {
+        x:'x',
+        columns: [
+            ['x', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+            ['price vs % of fish meal', 499, 618, 737, 856, 975, 1094, 1213, 1332, 1451, 1570]
+        ],
+        type: 'spline'
+    },
+    axis: {
+        x: {
+            label: '% of fish meal'
+        },
+        y: {
+            label: 'Cost per ton'
+        }
+    }
+});
+
