@@ -1,4 +1,5 @@
-	var ingredientNutrition = { 
+
+var ingredientNutrition = { 
     Overall: {
         columns: [
             ['Protein', 30],
@@ -152,10 +153,27 @@ $(document).ready(function() {
     $('#feed tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
+            
+
         }
         else {
             table.$('tr.selected').removeClass('selected');
             $(this).addClass('selected');
+
+            var protein = parseFloat($('td:eq(3)', this).html());
+            var ash = parseFloat($('td:eq(4)', this).html());
+            var lipids = parseFloat($('td:eq(5)', this).html());
+            var fiber = parseFloat($('td:eq(6)', this).html());
+
+            var ingredientRow =  [
+                    ['Protein', protein],
+                    ['Ash', ash],
+                    ['Lipids', lipids],
+                    ['Fiber', fiber],
+                    ['Other', 100-(protein+ash+lipids+fiber)],
+                ];
+
+            composition.load({unload: true, columns: ingredientRow});
         }
     } );
  
@@ -184,3 +202,162 @@ var fishAndSoyMeal = c3.generate({
     }
 });
 
+
+
+
+var foodIngredients = {
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    b: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    c: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+    a: {
+        columns: [
+            ['Insects', 30],
+            ['Fish Meal', 120],
+            ['Soy Meal', 120],
+            ['Cyclops', 120],
+            ['Daphnia', 120],
+            ['Salmon Pellets', 120],
+            ['Carp Pellets', 120]
+        ],
+    },
+}
