@@ -106,11 +106,11 @@ var ingredients = c3.generate({
         onclick: function (d, i) {             
         },
         onmouseover: function (d, i) { 
-            composition.load(ingredientNutrition[d.id]);
+            composition.load({unload: true, columns: ingredientNutrition[d.id].columns});
             d3.select('#composition .c3-chart-arcs-title').node().innerHTML = "Nutrition: " + d.id;
         },
         onmouseout: function (d, i) { 
-            composition.load(ingredientNutrition.Overall);
+            composition.load({unload: true, columns: ingredientNutrition.Overall.columns});
             d3.select('#composition .c3-chart-arcs-title').node().innerHTML = "Nutrition: Overall";
         }
     },
